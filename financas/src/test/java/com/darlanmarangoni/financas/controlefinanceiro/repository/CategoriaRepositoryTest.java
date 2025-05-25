@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.test.context.ActiveProfiles;
 
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
@@ -25,6 +26,7 @@ class CategoriaRepositoryTest {
         Categoria categoria = Categoria.builder()
                 .nome("Alimentação")
                 .descricao("Gastos com alimentação")
+                .dataCadastro(LocalDateTime.now())
                 .build();
 
         // Act
