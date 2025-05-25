@@ -4,8 +4,8 @@ spring:
   
   # Configurações do banco de dados
   datasource:
-    url: jdbc:postgresql://localhost:5432/postgres-db
-    username: root
+    url: jdbc:postgresql://100.124.125.39:5432/finance_db
+    username: postgres
     password: root
     driver-class-name: org.postgresql.Driver
   
