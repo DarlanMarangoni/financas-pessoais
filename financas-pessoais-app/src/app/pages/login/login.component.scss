@@ -1,0 +1,76 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #121212;
+  padding: 20px;
+}
+
+.login-card-wrapper {
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-card {
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  background-color: #1e1e1e;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.logo-icon {
+  font-size: 48px;
+  height: 48px;
+  width: 48px;
+  color: #7b1fa2; // Cor roxa do tema
+}
+
+mat-card-title {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 5px;
+  color: white;
+}
+
+mat-card-subtitle {
+  text-align: center;
+  margin-bottom: 20px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+mat-form-field {
+  margin-bottom: 15px;
+}
+
+.login-actions {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.login-button {
+  height: 45px;
+  font-size: 16px;
+}
+
+mat-card-actions {
+  display: flex;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.full-width {
+  width: 100%;
+}
