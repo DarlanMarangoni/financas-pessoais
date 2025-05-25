@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: financas
+  
+  # Configurações do banco de dados
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres-db
+    username: root
+    password: root
+    driver-class-name: org.postgresql.Driver
+  
+  # Configurações do JPA
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  
+  # Configurações do Flyway
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+    baseline-on-migrate: true
