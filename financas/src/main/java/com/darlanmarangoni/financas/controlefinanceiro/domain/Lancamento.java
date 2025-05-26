@@ -1,14 +1,12 @@
 package com.darlanmarangoni.financas.controlefinanceiro.domain;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
+import java.math.BigDecimal;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
@@ -18,16 +16,26 @@ import java.util.UUID;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class Categoria {
+public class Lancamento {
     @Id
-    @Column(name = "id", nullable = false, updatable = false)
+    @Column(nullable = false)
     private UUID id;
     
-    @Column(name = "nome", nullable = false)
-    private String nome;
+    @Column(name = "data", nullable = false)
+    private LocalDate data;
     
     @Column(name = "descricao", nullable = false)
     private String descricao;
+    
+    @Column(name = "valor_previsto")
+    private BigDecimal valorPrevisto;
+    
+    @Column(name = "valor_realizado")
+    private BigDecimal valorRealizado;
+    
+    @ManyToOne
+    @JoinColumn(name = "categoria_id")
+    private Categoria categoria;
     
     @CreationTimestamp
     @Column(name = "data_cadastro", nullable = false, updatable = false)
@@ -36,7 +44,7 @@ public class Categoria {
     @UpdateTimestamp
     @Column(name = "data_atualizacao")
     private LocalDateTime dataAtualizacao;
-    
+
     @PrePersist
     public void prePersist() {
         if (id == null) {
