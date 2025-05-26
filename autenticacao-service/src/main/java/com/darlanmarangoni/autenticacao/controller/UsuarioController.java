@@ -1,9 +1,9 @@
-package com.darlanmarangoni.financas.autenticacao.controller;
+package com.darlanmarangoni.autenticacao.controller;
 
-import com.darlanmarangoni.financas.autenticacao.dto.AtualizacaoUsuarioRequest;
-import com.darlanmarangoni.financas.autenticacao.dto.CadastroUsuarioRequest;
-import com.darlanmarangoni.financas.autenticacao.dto.UsuarioDTO;
-import com.darlanmarangoni.financas.autenticacao.service.UsuarioService;
+import com.darlanmarangoni.autenticacao.dto.AtualizacaoUsuarioRequest;
+import com.darlanmarangoni.autenticacao.dto.CadastroUsuarioRequest;
+import com.darlanmarangoni.autenticacao.dto.UsuarioDTO;
+import com.darlanmarangoni.autenticacao.service.UsuarioService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
