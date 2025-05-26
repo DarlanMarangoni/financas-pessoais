@@ -1,0 +1,25 @@
+{
+  "groups": [
+    {
+      "name": "application.security.jwt",
+      "type": "com.darlanmarangoni.autenticacao.config.JwtProperties",
+      "sourceType": "com.darlanmarangoni.autenticacao.config.JwtProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "application.security.jwt.expiration",
+      "type": "java.lang.Long",
+      "sourceType": "com.darlanmarangoni.autenticacao.config.JwtProperties"
+    },
+    {
+      "name": "application.security.jwt.secret-key",
+      "type": "java.lang.String",
+      "sourceType": "com.darlanmarangoni.autenticacao.config.JwtProperties"
+    }
+  ],
+  "hints": [],
+  "ignored": {
+    "properties": []
+  }
+}

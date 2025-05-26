@@ -1,0 +1,24 @@
+version: '3'
+
+services:
+  postgres:
+    image: postgres:16.2
+    container_name: postgres-db
+    environment:
+      POSTGRES_DB: postgres-db
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
+    ports:
+      - "5432:5432"
+    volumes:
+      - ~/tmp/pgdata:/var/lib/postgresql/data
+    # Limitar memória e CPU
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'  # Limite de 50% de um núcleo de CPU
+          memory: 512M  # Limite de 512 MB de memória
+
+volumes:
+  pgdata:
+    driver: local
